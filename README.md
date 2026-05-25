@@ -1,2 +1,2 @@
 # Infinite-Curio-Shop
-Updated deplyment
+Updated deployment
