@@ -47,7 +47,7 @@ const App = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
                   <img 
-                    src={cat.image_url || `https://source.unsplash.com/featured/?${cat.slug},collectibles`} 
+                    src={cat.image_url || `https://image.unsplash.com/photo-1558618666-fcd25c85cd?w=400`} 
                     alt={cat.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -92,10 +92,10 @@ const App = () => {
               </div>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {featuedProducts?.map((product: any) => (
-                  <ProductCard key={product.id} product={{
+                {featuedProducts?.map((product: {id: string; name: string; category_id: string}) => (
+                  <ProductCard key={product.id: string; name: string; category_id; string} product={{
                     ...product,
-                    category: categories.find((c: any) => c.id === product.category_id)?.name || 'Collectible'
+                    category: categories.find((c: {id; string name: string}) => c.id === product.category_id)?.name || 'Collectible'
                   }} />
                 ))}
               </div>
