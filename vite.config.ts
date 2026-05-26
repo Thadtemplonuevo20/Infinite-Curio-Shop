@@ -16,19 +16,4 @@ export default defineConfig({
     allowedHosts: true,
     hmr: { overlay: false },
   },
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: {
-        index: path.resolve(__dirname, 'index.html'),
-        background: path.resolve(__dirname, 'src/background.ts'),
-        content: path.resolve(__dirname, 'src/content.ts'),
-      },
-      output: {
-        entryFileNames: '[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]',
-      },
-    },
-  },
 })
